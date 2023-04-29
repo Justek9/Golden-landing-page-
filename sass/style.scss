@@ -107,20 +107,48 @@ section {
 		width: 100%;
 		z-index: -2;
 	}
+	button {
+		background-color: $color-yellow;
+		min-width: 160px;
+		margin: 24px auto 0 auto;
+		padding: 16px;
+		border-radius: 5px;
+		font-family: $font-main;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		border-style: none;
+		text-transform: uppercase;
+		color: $color-white;
+	}
 }
 
-button {
-	background-color: $color-yellow;
-	min-width: 160px;
-	margin: 24px auto 0 auto;
-	padding: 16px;
-	border-radius: 5px;
-	font-family: $font-main;
-	font-size: 16px;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	border-style: none;
-	text-transform: uppercase;
-	color: $color-white;
+/* Services */
+.services {
+	.wrapper {
+		padding-right: 10vw;
+		padding-left: 10vw;
+		.sub-container-services {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.sub-service {
+				flex: 0 0 33.333%;
+				font-size: 16px;
+				margin: 0 0 12px 0;
+				padding-right: 15px;
+				padding-left: 15px;
+				text-align: center;
+				position: relative;
+				margin-top: 40px;
+				i {
+					color: $color-yellow;
+					border: 1px solid $color-yellow;
+					padding: 10px;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
 }

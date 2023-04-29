@@ -92,8 +92,7 @@ section {
   width: 100%;
   z-index: -2;
 }
-
-button {
+.splash button {
   background-color: rgb(229, 212, 22);
   min-width: 160px;
   margin: 24px auto 0 auto;
@@ -107,4 +106,31 @@ button {
   border-style: none;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+/* Services */
+.services .wrapper {
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+.services .wrapper .sub-container-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .wrapper .sub-container-services .sub-service {
+  flex: 0 0 33.333%;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+}
+.services .wrapper .sub-container-services .sub-service i {
+  color: rgb(229, 212, 22);
+  border: 1px solid rgb(229, 212, 22);
+  padding: 10px;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
