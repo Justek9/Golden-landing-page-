@@ -133,4 +133,41 @@ section {
   border: 1px solid rgb(229, 212, 22);
   padding: 10px;
   border-radius: 50%;
+}
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .container p {
+  padding-right: 20px;
+}
+.footer .container ul {
+  list-style-type: none;
+}
+.footer .container li {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 20px;
+  font-size: 0;
+  transition: all 1s;
+}
+.footer .container li:hover {
+  transform: scale(1.2);
+}
+.footer .container li:hover i {
+  transform: scale(1.2);
+}
+.footer .container i {
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 40px;
 }/*# sourceMappingURL=style.css.map */
