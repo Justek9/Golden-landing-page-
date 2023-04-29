@@ -1,3 +1,11 @@
+// Variables
+$color-white: #ffffff;
+$transition: all 1s;
+$color-main: #2c2c54;
+$color-yellow: rgb(229, 212, 22);
+$font-main: 'Jost', sans-serif;
+$font-lobster: 'Lobster', cursive;
+
 *,
 *::before,
 *::after {
@@ -6,3 +14,113 @@
 	padding: 0;
 }
 
+// General
+
+body {
+	text-align: center;
+	color: $color-main;
+	font-size: 16px;
+	line-height: 1.7;
+	font-family: $font-main;
+}
+
+section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.section-title {
+	text-transform: uppercase;
+	.section-subtitle {
+		font-family: $font-lobster;
+		font-weight: normal;
+		margin-bottom: 30px;
+	}
+}
+
+// Navigation
+.navigation {
+	padding-top: 15px;
+	.container {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+
+		.navbar-brand {
+			font-family: $font-lobster;
+			color: $color-yellow;
+		}
+	}
+	ul {
+		display: flex;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 36px;
+		position: relative;
+	}
+
+	a {
+		text-decoration: none;
+		color: $color-white;
+		transition: $transition;
+		text-transform: uppercase;
+
+		&:hover {
+			color: blue;
+		}
+	}
+}
+
+// Header
+
+.splash {
+	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	h1,
+	h2 {
+		display: block;
+		color: black;
+		color: white;
+	}
+	h1 {
+		text-transform: uppercase;
+		font-size: 60px;
+	}
+	h2 {
+		font-family: $font-lobster;
+		letter-spacing: 5px;
+	}
+	img {
+		display: block;
+		height: 1000px;
+		left: 0;
+		object-fit: cover;
+		overflow: hidden;
+		position: absolute;
+		filter: brightness(50%);
+		top: 0;
+		width: 100%;
+		z-index: -2;
+	}
+}
+
+button {
+	background-color: $color-yellow;
+	min-width: 160px;
+	margin: 24px auto 0 auto;
+	padding: 16px;
+	border-radius: 5px;
+	font-family: $font-main;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-style: none;
+	text-transform: uppercase;
+	color: $color-white;
+}

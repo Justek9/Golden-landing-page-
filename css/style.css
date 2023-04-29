@@ -6,6 +6,105 @@
   padding: 0;
 }
 
+body {
+  text-align: center;
+  color: #2c2c54;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Jost", sans-serif;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-title {
+  text-transform: uppercase;
+}
+.section-title .section-subtitle {
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.navigation {
+  padding-top: 15px;
+}
+.navigation .container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.navigation .container .navbar-brand {
+  font-family: "Lobster", cursive;
+  color: rgb(229, 212, 22);
+}
+.navigation ul {
+  display: flex;
+}
+.navigation li {
+  display: inline-block;
+  margin-right: 36px;
+  position: relative;
+}
+.navigation a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 1s;
+  text-transform: uppercase;
+}
+.navigation a:hover {
+  color: blue;
+}
+
 .splash {
-  background-color: blue;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.splash h1,
+.splash h2 {
+  display: block;
+  color: black;
+  color: white;
+}
+.splash h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.splash h2 {
+  font-family: "Lobster", cursive;
+  letter-spacing: 5px;
+}
+.splash img {
+  display: block;
+  height: 1000px;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  filter: brightness(50%);
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+button {
+  background-color: rgb(229, 212, 22);
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  text-transform: uppercase;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
