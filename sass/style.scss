@@ -25,27 +25,27 @@ body {
 }
 
 section {
-	padding-top: 50px;
 	padding-bottom: 50px;
+	padding-top: 50px;
 }
 
 .section-title {
 	text-transform: uppercase;
-	.section-subtitle {
-		font-family: $font-lobster;
-		font-weight: normal;
-		margin-bottom: 30px;
-	}
+}
+.section-subtitle {
+	font-family: $font-lobster;
+	font-weight: normal;
+	margin-bottom: 50px;
 }
 
 // Navigation
 
 .navigation {
-	padding-top: 20px;
 	.container {
 		display: flex;
 		justify-content: space-around;
 		text-align: center;
+		padding: 20px;
 
 		.navbar-brand {
 			font-family: $font-lobster;
@@ -69,7 +69,8 @@ section {
 		text-transform: uppercase;
 
 		&:hover {
-			color: blue;
+			color: black;
+			font-weight: bold;
 		}
 	}
 }
@@ -85,7 +86,6 @@ section {
 	h1,
 	h2 {
 		display: block;
-		color: black;
 		color: white;
 	}
 	h1 {
@@ -107,6 +107,8 @@ section {
 		top: 0;
 		width: 100%;
 		z-index: -2;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	button {
 		background-color: $color-yellow;
@@ -139,7 +141,6 @@ section {
 			padding-left: 15px;
 			text-align: center;
 			position: relative;
-			margin-top: 40px;
 			i {
 				color: $color-yellow;
 				border: 1px solid $color-yellow;
@@ -158,32 +159,33 @@ section {
 	justify-content: center;
 	align-content: center;
 
-	.container2 {
+	.container {
 		width: clamp(800px, 80vw, 1400px);
 	}
-}
-
-.our-portfolio-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 20px;
-
-	.sub-container-portfolio {
+	.our-portfolio-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
 		align-items: center;
-		height: 300px;
-		width: 300px;
-		margin-bottom: 80px;
-	}
+		margin-left: 30px;
+		margin-right: 30px;
 
-	.portfolio-image {
-		height: 100%;
-		width: 100%;
+		.sub-container-portfolio {
+			align-items: center;
+			height: 400px;
+			width: 400px;
+			margin-bottom: 80px;
+		}
 
-		img {
+		.portfolio-image {
 			height: 100%;
 			width: 100%;
-			object-fit: cover;
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 
@@ -237,6 +239,41 @@ section {
 			font-size: 20px;
 			color: $color-white;
 			line-height: 40px;
+		}
+	}
+}
+
+// Media
+@media (max-width: 767px) {
+	.splash {
+		padding-bottom: 20px;
+		h1 {
+			font-size: 30px;
+		}
+
+		h2 {
+			font-size: 15px;
+		}
+		button {
+			min-width: 80px;
+			margin: 12px auto 0 auto;
+			padding: 10px;
+			font-size: 10px;
+		}
+	}
+	.navigation {
+		.container {
+			flex-wrap: wrap;
+		}
+		ul {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+
+	.services {
+		.sub-container-services {
+			flex-direction: column;
 		}
 	}
 }

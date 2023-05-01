@@ -15,26 +15,25 @@ body {
 }
 
 section {
-  padding-top: 50px;
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .section-title {
   text-transform: uppercase;
 }
-.section-title .section-subtitle {
+
+.section-subtitle {
   font-family: "Lobster", cursive;
   font-weight: normal;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-.navigation {
-  padding-top: 20px;
-}
 .navigation .container {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  padding: 20px;
 }
 .navigation .container .navbar-brand {
   font-family: "Lobster", cursive;
@@ -55,7 +54,8 @@ section {
   text-transform: uppercase;
 }
 .navigation a:hover {
-  color: blue;
+  color: black;
+  font-weight: bold;
 }
 
 .splash {
@@ -68,7 +68,6 @@ section {
 .splash h1,
 .splash h2 {
   display: block;
-  color: black;
   color: white;
 }
 .splash h1 {
@@ -91,6 +90,8 @@ section {
   top: 0;
   width: 100%;
   z-index: -2;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .splash button {
   background-color: rgb(229, 212, 22);
@@ -122,7 +123,6 @@ section {
   padding-left: 15px;
   text-align: center;
   position: relative;
-  margin-top: 40px;
 }
 .services .sub-container-services .sub-service i {
   color: rgb(229, 212, 22);
@@ -138,37 +138,38 @@ section {
   justify-content: center;
   align-content: center;
 }
-.portfolio .container2 {
+.portfolio .container {
   width: clamp(800px, 80vw, 1400px);
 }
-
-.our-portfolio-container {
+.portfolio .our-portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-}
-.our-portfolio-container .sub-container-portfolio {
+  justify-content: space-around;
   align-items: center;
-  height: 300px;
-  width: 300px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.portfolio .our-portfolio-container .sub-container-portfolio {
+  align-items: center;
+  height: 400px;
+  width: 400px;
   margin-bottom: 80px;
 }
-.our-portfolio-container .portfolio-image {
+.portfolio .our-portfolio-container .portfolio-image {
   height: 100%;
   width: 100%;
 }
-.our-portfolio-container .portfolio-image img {
+.portfolio .our-portfolio-container .portfolio-image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.our-portfolio-container .porfolio-description {
+.portfolio .porfolio-description {
   margin-top: 15px;
 }
-.our-portfolio-container .porfolio-description h4,
-.our-portfolio-container .porfolio-description h5 {
+.portfolio .porfolio-description h4,
+.portfolio .porfolio-description h5 {
   text-align: center;
 }
 
@@ -207,4 +208,32 @@ section {
   font-size: 20px;
   color: #ffffff;
   line-height: 40px;
+}
+
+@media (max-width: 767px) {
+  .splash {
+    padding-bottom: 20px;
+  }
+  .splash h1 {
+    font-size: 30px;
+  }
+  .splash h2 {
+    font-size: 15px;
+  }
+  .splash button {
+    min-width: 80px;
+    margin: 12px auto 0 auto;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .navigation .container {
+    flex-wrap: wrap;
+  }
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .services .sub-container-services {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
