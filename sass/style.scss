@@ -5,6 +5,19 @@ $color-main: #2c2c54;
 $color-yellow: rgb(229, 212, 22);
 $font-main: 'Jost', sans-serif;
 $font-lobster: 'Lobster', cursive;
+@mixin btn-style {
+	padding: 16px;
+	border-radius: 5px;
+	font-family: $font-main;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border-style: none;
+	text-transform: uppercase;
+	color: $color-white;
+	transition: $transition;
+}
 
 *,
 *::before,
@@ -114,16 +127,11 @@ section {
 		background-color: $color-yellow;
 		min-width: 160px;
 		margin: 24px auto 0 auto;
-		padding: 16px;
-		border-radius: 5px;
-		font-family: $font-main;
-		font-size: 16px;
-		text-align: center;
-		text-decoration: none;
-		cursor: pointer;
-		border-style: none;
-		text-transform: uppercase;
-		color: $color-white;
+		@include btn-style;
+		&:hover {
+			background-color: $color-white;
+			color: $color-yellow;
+		}
 	}
 }
 
@@ -159,7 +167,7 @@ section {
 	justify-content: center;
 	align-content: center;
 
-	.container {
+	.container-fluid {
 		width: clamp(800px, 80vw, 1400px);
 	}
 	.our-portfolio-container {
@@ -175,16 +183,43 @@ section {
 			height: 400px;
 			width: 400px;
 			margin-bottom: 80px;
+			position: relative;
 		}
 
 		.portfolio-image {
 			height: 100%;
 			width: 100%;
+			&:hover {
+				img {
+					transition: $transition;
+					filter: brightness(30%);
+				}
+				.portfolio-btn {
+					display: block;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
 
 			img {
 				height: 100%;
 				width: 100%;
 				object-fit: cover;
+				z-index: -2;
+			}
+			.portfolio-btn {
+				display: none;
+				position: absolute;
+				z-index: 2;
+				min-width: 30px;
+				color: $color-main;
+				background-color: $color-main;
+				@include btn-style;
+				&:hover {
+					background-color: $color-white;
+					color: $color-main;
+				}
 			}
 		}
 	}
@@ -274,6 +309,14 @@ section {
 	.services {
 		.sub-container-services {
 			flex-direction: column;
+		}
+	}
+	.portfolio {
+		.our-portfolio-container {
+			.sub-container-portfolio {
+				height: 200px;
+				width: 200px;
+			}
 		}
 	}
 }
